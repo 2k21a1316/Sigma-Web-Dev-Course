@@ -1,0 +1,5 @@
+js for client side ->frontend using script tag and server side ->backend
+backend code client ko nhi show hota 
+code as npm init to maintain backend code for future
+nodejs is js v8 engine
+npm install
