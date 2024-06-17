@@ -22,7 +22,8 @@ import path from "path"
 
 const basepath = "C:\\Users\\iitia\\Downloads\\Sigma Web Development Course\\Sigma-Web-Dev-Course\\Video 93"
 
-let files = await fs.readdir(basepath)
+let files = await fs.readdir(basepath)//without await ,it will show promise pending
+// The await keyword is placed before the call to a function or variable that returns a promise. It makes JavaScript wait for the promise object to settle before running the code in the next line. This error occurs because the await keyword must be used inside an asynchronous function or a module.
 
 for (const item of files) {
     console.log("running for ", item)
