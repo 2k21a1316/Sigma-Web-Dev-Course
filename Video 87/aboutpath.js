@@ -6,4 +6,4 @@ console.log(path.extname(myPath))
 console.log(path.dirname(myPath))
 console.log(path.basename(myPath))
 
-console.log(path.join("c:/", "programs\\harry.txt"))
+console.log(path.join("c:/", "programs\\harry.txt"))//path take both slash as \
