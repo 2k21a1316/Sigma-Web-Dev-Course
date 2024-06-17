@@ -2,13 +2,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('public'))
+// why to use express->secure ,serve static file,get ,post request manage 
+// express ka use isliye karte hai taki backend ka code na dikhe client ko 
+app.use(express.static('public'))//middleware ,public folder ko public banado
+// so public folder made for to share and show the file 
 
-// app.get or app.post or app.put or app.delete(path, handler)
+// app.get or app.post or app.put or app.delete(path, handler)//get ewquest is bydefault in browser
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World!')//handler
 })
-
+//source code me data nhi hona chahiye
 app.get('/about', (req, res) => {
     res.send('About us')
 })
@@ -24,7 +27,8 @@ app.get('/blog', (req, res) => {
 app.get('/blog/:slug', (req, res) => {
     // logic to fetch {slug} from the db
     // For URL: http://localhost:3000/blog/intro-to-padosi?mode=dark&region=in
-    console.log(req.params) // will output { slug: 'intro-to-padosi' }
+    console.log(req.params) // will output { slug: 'intro-to-padosi' }//req.params is object and :slug is url parameter
+    // query is parameter and object ,after question mark
     console.log(req.query) // will output { mode: 'dark', region: 'in' }
 
     res.send(`hello ${req.params.slug}`)

@@ -1,4 +1,4 @@
-const fs = require("fs")//npm init -y always need to inititalise node project
+const fs = require("fs")//npm init -y always need to inititalise node project for the npm project
 // const fs = require("fs/promises")
  
 console.log("starting")
