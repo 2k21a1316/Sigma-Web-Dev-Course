@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        async function testPost(){
+        async function testPost(){//this is post request ,this request cant tested without this in the browser
             let a = await fetch("/", {method: "PUT"})
             let b = await a.text()
             console.log(b)
